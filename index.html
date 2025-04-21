@@ -1,162 +1,89 @@
-<div id="escape-game">
-  <h2>🔐 Escape Game Littéraire : Le Discours Interdit</h2>
-  <p>
-    Année 1574. 📜 Tu es un jeune humaniste révolté. La Boétie est mort depuis 14 ans, mais un manuscrit oublié du <em>Discours de la servitude volontaire</em> vient d'être retrouvé. Pour le rendre public, tu dois échapper à la censure du pouvoir royal, traverser 15 épreuves, et décrypter le sens profond du texte. Un seul mot d’ordre : résister. Prêt ? Commence l’aventure.
-  </p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Game - La Boétie 🔐📜</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #f9f6f2;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .section {
+      margin-bottom: 30px;
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Escape Game Littéraire : Libère La Boétie ! 📜</h1>
+  <p>Tu te réveilles dans une étrange bibliothèque. Les murs sont couverts de livres anciens, une lueur vacillante éclaire un pupitre. Une voix murmure :</p>
+  <blockquote>
+    « Seul celui qui comprend la *Servitude volontaire* pourra me libérer. »
+  </blockquote>
+  <p>Chaque énigme résolue te rapproche de la clé. Prêt(e) ? 🧠</p>
 
-  <div class="enigme" id="enigme1">
-    <h3>🌮 Énigme 1 : La page disparue</h3>
-    <p>
-      Un indice est caché dans une phrase du Discours :<br>
-      <em>« Il est incroyable de voir comme le peuple, dès qu’il est assujetti, tombe soudain dans un si profond oubli de sa liberté... »</em><br>
-      Mais quel mot-clé La Boétie répète-t-il plusieurs fois dans le premier tiers du texte, pour décrire l'attitude des sujets ?
-    </p>
-    <input type="text" id="reponse1" placeholder="Écris ta réponse ici">
-    <button onclick="verifierEnigme1()">Valider ✅</button>
-    <p id="feedback1"></p>
+  <div class="section active" id="section1">
+    <h2>Énigme 1 : Le Nom effacé ✍️</h2>
+    <p>Sur une page jaunie, tu lis : <em>« Celui qui parle de liberté, mais dont le nom n’a pas été inscrit sur le manuscrit original… »</em></p>
+    <p>Quel est le nom complet de l’auteur du <strong>Discours de la servitude volontaire</strong> ?</p>
+    <input type="text" id="answer1" placeholder="Tape ta réponse ici">
+    <button onclick="checkAnswer1()">Valider</button>
+    <p class="result" id="result1"></p>
   </div>
 
-  <div class="enigme" id="enigme2" style="display:none">
-    <h3>🕵️‍♂️ Énigme 2 : Le choix de l'ombre</h3>
-    <p>
-      Un noble t’accueille dans son manoir et t'offre trois livres. Un seul contient un extrait caché du Discours. Sur leur tranche, tu lis :<br>
-      📕 <em>Du contrat social</em><br>
-      📗 <em>Le Prince</em><br>
-      📘 <em>Les Essais</em><br>
-      Lequel choisir pour trouver la trace de La Boétie ?
-    </p>
-    <select id="reponse2">
-      <option value="">Choisis un livre</option>
-      <option value="contrat">📕 Du contrat social</option>
-      <option value="prince">📗 Le Prince</option>
-      <option value="essais">📘 Les Essais</option>
-    </select>
-    <button onclick="verifierEnigme2()">Valider ✅</button>
-    <p id="feedback2"></p>
+  <div class="section" id="section2">
+    <h2>Énigme 2 : Le labyrinthe des dates 🗓️</h2>
+    <p>Tu ouvres un tiroir secret. À l’intérieur, trois parchemins. L’un d’eux indique : <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, et soustrais-la de l’année présumée d’écriture du texte. »</em></p>
+    <p>Si l’année d’écriture est 1549, et qu’il avait bien 18 ans, quel est le résultat de la soustraction ?</p>
+    <input type="text" id="answer2" placeholder="Ta réponse">
+    <button onclick="checkAnswer2()">Valider</button>
+    <p class="result" id="result2"></p>
   </div>
 
-  <div class="enigme" id="enigme3" style="display:none">
-    <h3>🔮 Énigme 3 : Le code de la servitude</h3>
-    <p>
-      Un coffre ancien s’ouvre à demi. Il contient un papier avec le message suivant :
-    </p>
-    <blockquote>
-      "Transforme chaque lettre du mot <strong>OBEIR</strong> selon cette règle : A → Z, B → Y, C → X, ..."
-    </blockquote>
-    <p>Entre le mot décodé :</p>
-    <input type="text" id="reponse3" placeholder="Ta réponse">
-    <button onclick="verifierEnigme3()">Valider ✅</button>
-    <p id="feedback3"></p>
-  </div>
+  <script>
+    function checkAnswer1() {
+      const answer = document.getElementById("answer1").value.trim().toLowerCase();
+      if (answer === "etienne de la boétie" || answer === "etienne de la boetie") {
+        document.getElementById("result1").textContent = "✅ Bien joué ! Une porte s’ouvre...";
+        document.getElementById("section2").classList.add("active");
+      } else {
+        document.getElementById("result1").textContent = "❌ Essaie encore...";
+      }
+    }
 
-  <div class="enigme" id="enigme4" style="display:none">
-    <h3>🕵️‍♀️ Énigme 4 : Le jeu du miroir</h3>
-    <p>
-      Complète cette citation emblématique du Discours (un seul mot) :<br>
-      <em>« Soyez résolus de ne plus ______ et vous serez libres. »</em>
-    </p>
-    <input type="text" id="reponse4" placeholder="Un seul mot, minuscule">
-    <button onclick="verifierEnigme4()">Valider ✅</button>
-    <p id="feedback4"></p>
-  </div>
-</div>
-
-<script>
-function verifierEnigme1() {
-  const r = document.getElementById("reponse1").value.trim().toLowerCase();
-  const f = document.getElementById("feedback1");
-  if (r === "habitude" || r === "l’habitude" || r === "l'habitude") {
-    f.innerHTML = "🟩 Bonne réponse ! Tu peux continuer.";
-    document.getElementById("enigme2").style.display = "block";
-  } else {
-    f.innerHTML = "🔵 Ce n'est pas encore cela. Cherche un mot qui revient souvent dans les premières pages.";
-  }
-}
-function verifierEnigme2() {
-  const r = document.getElementById("reponse2").value;
-  const f = document.getElementById("feedback2");
-  if (r === "essais") {
-    f.innerHTML = "🟩 Bien vu ! Montaigne veille encore...";
-    document.getElementById("enigme3").style.display = "block";
-  } else {
-    f.innerHTML = "🔵 Mauvaise pioche. Ce n'est pas un ami de La Boétie.";
-  }
-}
-function verifierEnigme3() {
-  const r = document.getElementById("reponse3").value.trim().toUpperCase();
-  const f = document.getElementById("feedback3");
-  if (r === "LYVRI") {
-    f.innerHTML = "🟩 Tu as brisé le code ! Le chemin se dévoile.";
-    document.getElementById("enigme4").style.display = "block";
-  } else {
-    f.innerHTML = "🔵 Essaie encore. C'est un mot miroir d'OBEIR.";
-  }
-}
-function verifierEnigme4() {
-  const r = document.getElementById("reponse4").value.trim().toLowerCase();
-  const f = document.getElementById("feedback4");
-  if (r === "servir") {
-    f.innerHTML = "🟩 Tu détiens la clé de la liberté. Une nouvelle porte s’ouvre...";
-    // On peut continuer ici avec enigme5 etc.
-  } else {
-    f.innerHTML = "🔵 Non. C'est le mot que La Boétie oppose à "libres".";
-  }
-}
-</script>
-
-<style>
-body {
-  background-color: #f4f1ea;
-  color: #2c2c2c;
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-}
-#escape-game {
-  max-width: 800px;
-  margin: auto;
-  background: #ffffff;
-  padding: 2em;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-.enigme {
-  background: #f9f9f9;
-  padding: 1em 1.5em;
-  margin-bottom: 2em;
-  border-left: 6px solid #555;
-  border-radius: 8px;
-}
-.enigme h3 {
-  margin-top: 0;
-  color: #222;
-}
-input, select {
-  padding: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  width: 100%;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-button {
-  padding: 0.6em 1.2em;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 5px;
-  margin-top: 0.5em;
-}
-button:hover {
-  background-color: #000;
-}
-blockquote {
-  border-left: 4px solid #ccc;
-  padding-left: 1em;
-  color: #555;
-  margin: 1em 0;
-  font-style: italic;
-}
-</style>
+    function checkAnswer2() {
+      const answer = document.getElementById("answer2").value.trim();
+      if (answer === "1531") {
+        document.getElementById("result2").textContent = "✅ Exactement ! Un passage s’éclaire dans le mur...";
+        // Ici on pourra activer la section suivante plus tard
+      } else {
+        document.getElementById("result2").textContent = "❌ Non, ce n’est pas ça...";
+      }
+    }
+  </script>
+</body>
+</html>
