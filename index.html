@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>escape game - la boétie 🔓📚</title>
+  <title>Escape game - La Boétie 🔓📚</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -39,44 +39,46 @@
   </style>
 </head>
 <body>
-  <h1>🔓 escape game littéraire : libère la boétie 📚🕯️</h1>
+  <main>
+    <h1>🔓 Escape game littéraire : libère La Boétie 📚🕯️</h1>
 
-  <p>🌫️ Tu ouvres les yeux. L’air est froid, chargé de poussière. Tu es allongé·e sur le sol d’une immense pièce circulaire. Les murs sont entièrement couverts de bibliothèques anciennes. Des centaines de grimoires t'observent en silence. 📖👁️</p>
+    <p>🌫️ Tu ouvres les yeux. L’air est froid, chargé de poussière. Tu es allongé·e sur le sol d’une immense pièce circulaire. Les murs sont entièrement couverts de bibliothèques anciennes. Des centaines de grimoires t'observent en silence. 📖👁️</p>
 
-  <p>🕰️ Une horloge monumentale fait entendre son tic-tac oppressant. Soudain, une lueur se projette depuis le plafond voûté, illuminant une statue de marbre au centre de la pièce. Elle représente un jeune homme tenant un rouleau. À ses pieds, une phrase gravée : <em>« Ceux qui acceptent leur chaîne oublient leur nom. »</em> 🗿</p>
+    <p>🕰️ Une horloge monumentale fait entendre son tic-tac oppressant. Soudain, une lueur se projette depuis le plafond voûté, illuminant une statue de marbre au centre de la pièce. Elle représente un jeune homme tenant un rouleau. À ses pieds, une phrase gravée : <em>« Ceux qui acceptent leur chaîne oublient leur nom. »</em> 🗿</p>
 
-  <p>Un courant d’air te fait frissonner. Une voix lointaine, éthérée, murmure dans l’ombre :</p>
-  <blockquote>
-    <em>« Le savoir est la seule clé. Pour libérer la pensée, tu devras affronter les énigmes de la servitude. Chaque réponse te rapprochera de la lumière… »</em>
-  </blockquote>
-
-  <p>🔐 Tu n’as pas le choix. Tu te lèves, l’esprit embrumé mais décidé. Une porte invisible claque derrière toi. Le silence est désormais total. Tu es seul·e. Mais pas sans ressources. Commençons. ✨</p>
-
-  <div class="section active" id="section1">
-    <h2>🔍 énigme 1 : le nom effacé ✍️</h2>
-    <p>📜 Tu t’approches d’un pupitre recouvert de poussière. En soufflant doucement, tu découvres un vieux manuscrit, ouvert à une page arrachée. Une seule annotation est restée :</p>
+    <p>Un courant d’air te fait frissonner. Une voix lointaine, éthérée, murmure dans l’ombre :</p>
     <blockquote>
-      « Celui qui parla de liberté… mais que personne ne nomma. »
+      <em>« Le savoir est la seule clé. Pour libérer la pensée, tu devras affronter les énigmes de la servitude. Chaque réponse te rapprochera de la lumière… »</em>
     </blockquote>
-    <p>🔎 Une chandelle s’allume d’elle-même à ta droite. Elle éclaire à peine quelques mots griffonnés : « ami de Montaigne ». Tu comprends qu’il faut retrouver un nom. Le bon nom.</p>
-    <p>🧠 Quel est le <strong>nom complet</strong> de l’auteur du <em>Discours de la servitude volontaire</em> ?</p>
-    <input type="text" id="answer1" placeholder="Tape ta réponse ici...">
-    <button onclick="checkAnswer1()">valider la réponse ✅</button>
-    <p class="result" id="result1"></p>
-  </div>
 
-  <div class="section" id="section2">
-    <h2>🗝️ énigme 2 : le labyrinthe des dates 🗓️</h2>
-    <p>⚙️ En entendant ta réponse, la statue tremble légèrement. Un compartiment s’ouvre lentement dans son socle. Trois rouleaux anciens s’en échappent et planent devant toi. L’un d’eux brille d’une lumière bleutée. ✨</p>
+    <p>🔐 Tu n’as pas le choix. Tu te lèves, l’esprit embrumé mais décidé. Une porte invisible claque derrière toi. Le silence est désormais total. Tu es seul·e. Mais pas sans ressources. Commençons. ✨</p>
 
-    <p>Tu tends la main. Le rouleau s’ouvre seul. Il indique :<br>
-    <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, et soustrais-la de l’année présumée d’écriture du texte. »</em></p>
+    <div class="section active" id="section1">
+      <h2>🔍 Énigme 1 : le nom effacé</h2>
+      <p>📜 Tu t’approches d’un pupitre recouvert de poussière. En soufflant doucement, tu découvres un vieux manuscrit, ouvert à une page arrachée. Une seule annotation est restée :</p>
+      <blockquote>
+        « Celui qui parla de liberté… mais que personne ne nomma. »
+      </blockquote>
+      <p>🔎 Une chandelle 🕯️ s’allume d’elle-même à ta droite. Elle éclaire à peine quelques mots griffonnés : « ami de Montaigne ». Tu comprends qu’il faut retrouver un nom. Le bon nom.</p>
+      <p>🧠 Quel est le <strong>nom complet</strong> de l’auteur du <em>Discours de la servitude volontaire</em> ?</p>
+      <input type="text" id="answer1" placeholder="Tape ta réponse ici...">
+      <button onclick="checkAnswer1()">valider la réponse ✅</button>
+      <p class="result" id="result1"></p>
+    </div>
 
-    <p>📘 Si l’année d’écriture est <strong>1549</strong> et qu’il avait 18 ans, quel est le résultat ?</p>
-    <input type="text" id="answer2" placeholder="Ta réponse ici...">
-    <button onclick="checkAnswer2()">valider la réponse ✅</button>
-    <p class="result" id="result2"></p>
-  </div>
+    <div class="section" id="section2">
+      <h2>🗝️ Énigme 2 : le labyrinthe des dates</h2>
+      <p>⚙️ En entendant ta réponse, la statue tremble légèrement. Un compartiment s’ouvre lentement dans son socle. Trois rouleaux anciens s’en échappent et planent devant toi. L’un d’eux brille d’une lumière bleutée. ✨</p>
+
+      <p>Tu tends la main. Le rouleau s’ouvre seul. Il indique :<br>
+      <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, et soustrais-la de l’année présumée d’écriture du texte. »</em></p>
+
+      <p>📘 Si l’année d’écriture est <strong>1549</strong> et qu’il avait 18 ans, quel est le résultat ?</p>
+      <input type="text" id="answer2" placeholder="Ta réponse ici...">
+      <button onclick="checkAnswer2()">valider la réponse ✅</button>
+      <p class="result" id="result2"></p>
+    </div>
+  </main>
 
   <script>
     function checkAnswer1() {
