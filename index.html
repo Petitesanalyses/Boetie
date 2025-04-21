@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escape Game - La Boétie 🔐📜</title>
+  <title>escape game - la boétie 🔓📚</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -39,49 +39,59 @@
   </style>
 </head>
 <body>
-  <h1>🔐 Escape Game Littéraire : Libère La Boétie ! 📜</h1>
-  <p>Tu te réveilles dans une étrange bibliothèque. Les murs sont couverts de livres anciens, une lueur vacillante éclaire un pupitre. Une voix murmure :</p>
-  <blockquote>
-    « Seul celui qui comprend la *Servitude volontaire* pourra me libérer. »
-  </blockquote>
-  <p>Chaque énigme résolue te rapproche de la clé. Prêt(e) ? 🧠</p>
+  <h1>🔓 escape game littéraire : libère la boétie 📚🕯️</h1>
+  <p>🌫️ Tu te réveilles dans une immense pièce circulaire. Des bibliothèques colossales s’élèvent jusqu’au plafond voûté. Le silence est total, seulement brisé par un cliquetis régulier… une horloge ancienne. 🕰️</p>
+
+  <p>Au centre, une statue de marbre représentant un jeune homme tient un rouleau. À ses pieds, gravé dans la pierre : <em>« Ceux qui acceptent leur chaîne oublient leur nom. »</em> 🗿</p>
+
+  <p>Une voix fantomatique s’élève :<br>
+  <em>« Pour briser les chaînes, il te faudra retrouver le nom, la pensée, la révolte silencieuse… »</em></p>
+
+  <p>🔐 Chaque énigme franchie t’ouvrira une porte. Réfléchis, observe, résous… ou reste prisonnier à jamais. Prêt(e) à commencer cette quête littéraire ? ✨📖</p>
 
   <div class="section active" id="section1">
-    <h2>Énigme 1 : Le Nom effacé ✍️</h2>
-    <p>Sur une page jaunie, tu lis : <em>« Celui qui parle de liberté, mais dont le nom n’a pas été inscrit sur le manuscrit original… »</em></p>
-    <p>Quel est le nom complet de l’auteur du <strong>Discours de la servitude volontaire</strong> ?</p>
-    <input type="text" id="answer1" placeholder="Tape ta réponse ici">
-    <button onclick="checkAnswer1()">Valider</button>
+    <h2>🔍 énigme 1 : le nom effacé ✍️</h2>
+    <p>📜 Sur un pupitre poussiéreux repose un manuscrit. Une page est arrachée, mais une annotation demeure :</p>
+    <blockquote>
+      « Celui qui parla de liberté… mais que personne ne nomma. »
+    </blockquote>
+    <p>🔎 Quel est le <strong>nom complet</strong> de l’auteur du <em>Discours de la servitude volontaire</em> ?</p>
+    <input type="text" id="answer1" placeholder="Tape ta réponse ici...">
+    <button onclick="checkAnswer1()">valider la réponse ✅</button>
     <p class="result" id="result1"></p>
   </div>
 
   <div class="section" id="section2">
-    <h2>Énigme 2 : Le labyrinthe des dates 🗓️</h2>
-    <p>Tu ouvres un tiroir secret. À l’intérieur, trois parchemins. L’un d’eux indique : <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, et soustrais-la de l’année présumée d’écriture du texte. »</em></p>
-    <p>Si l’année d’écriture est 1549, et qu’il avait bien 18 ans, quel est le résultat de la soustraction ?</p>
-    <input type="text" id="answer2" placeholder="Ta réponse">
-    <button onclick="checkAnswer2()">Valider</button>
+    <h2>🗝️ énigme 2 : le labyrinthe des dates 🗓️</h2>
+    <p>🧩 Un compartiment s’ouvre dans le socle de la statue. Trois rouleaux s’en échappent et tourbillonnent avant de se figer en l’air. L’un d’eux brille. ✨</p>
+
+    <p>Il indique : <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, et soustrais-la de l’année présumée d’écriture du texte. »</em></p>
+    <p>📘 Si l’année d’écriture est <strong>1549</strong> et qu’il avait 18 ans, quel est le résultat ?</p>
+    <input type="text" id="answer2" placeholder="Ta réponse ici...">
+    <button onclick="checkAnswer2()">valider la réponse ✅</button>
     <p class="result" id="result2"></p>
   </div>
 
   <script>
     function checkAnswer1() {
       const answer = document.getElementById("answer1").value.trim().toLowerCase();
+      const result = document.getElementById("result1");
       if (answer === "etienne de la boétie" || answer === "etienne de la boetie") {
-        document.getElementById("result1").textContent = "✅ Bien joué ! Une porte s’ouvre...";
+        result.textContent = "✅ Bien joué ! Une vibration secoue le sol, un cliquetis retentit... un nouveau compartiment s’ouvre !";
         document.getElementById("section2").classList.add("active");
       } else {
-        document.getElementById("result1").textContent = "❌ Essaie encore...";
+        result.textContent = "❌ Ce n’est pas le bon nom... 💡 Indice : il fut un grand ami de Montaigne, et son prénom commence par un É...";
       }
     }
 
     function checkAnswer2() {
       const answer = document.getElementById("answer2").value.trim();
+      const result = document.getElementById("result2");
       if (answer === "1531") {
-        document.getElementById("result2").textContent = "✅ Exactement ! Un passage s’éclaire dans le mur...";
-        // Ici on pourra activer la section suivante plus tard
+        result.textContent = "✅ Juste ! Une lumière bleue trace un chemin dans les rayonnages... tu avances dans le labyrinthe de la pensée. 🔦";
+        // Prochaine section à activer ici
       } else {
-        document.getElementById("result2").textContent = "❌ Non, ce n’est pas ça...";
+        result.textContent = "❌ Mauvaise réponse... 🤔 Indice : Soustrais bien 18 à 1549... Quelle année trouve-t-on ?";
       }
     }
   </script>
