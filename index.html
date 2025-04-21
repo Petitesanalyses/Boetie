@@ -56,69 +56,204 @@
   </style>
 </head>
 <body>
-  <main>
-    <h1>🔓 Escape game littéraire : Libère La Boétie</h1>
+<main>
+  <h1>🔓 Escape game littéraire : Libère La Boétie</h1>
 
-    <p>Tu te redresses lentement. Une brume légère flotte dans l’air, effleurant les livres anciens, témoins silencieux d’une époque révolue. Quelque chose ici semble vivant. L’atmosphère est solennelle, presque sacrée, comme si ce lieu hors du temps attendait que tu en déchiffres les secrets.</p>
+  <div class="section active" id="section1">
+    <h2>Énigme 1 : Le nom effacé</h2>
+    <p>Près d’un pupitre vermoulu repose un manuscrit relié en cuir. Une annotation manuscrite presque effacée dit : <em>« Celui qui parla de liberté… mais que nul ne nomma. »</em></p>
+    <p>À côté, une bougie 🕯️ révèle un mot gravé à la pointe du couteau : « Montaigne ».</p>
+    <p><strong>Quel est le nom complet de l’auteur du Discours de la servitude volontaire ?</strong></p>
+    <input type="text" id="answer1" placeholder="Tape ta réponse ici...">
+    <button onclick="checkAnswer1()">Valider la réponse</button>
+    <p class="result" id="result1"></p>
+  </div>
 
-    <p>Soudain, un rai de lumière perçant les vitraux illumine une statue de marbre blanc. Le visage figé du jeune homme semble t’observer, empreint d’une gravité paisible. Sur le socle est gravée une maxime en lettres dorées : <em>« Ceux qui acceptent leur chaîne oublient leur nom. »</em></p>
+  <div class="section" id="section2">
+    <h2>Énigme 2 : Le labyrinthe des dates</h2>
+    <p>Un tiroir s’ouvre lentement dans la pierre. Un parchemin y repose. Il s’y lit : <em>« Si tu veux comprendre le Discours, commence par savoir ce qu’était un homme de dix-huit ans. »</em></p>
+    <p><strong>L’auteur est né en 1530 ou 1531. Le Discours fut rédigé vers 1548 ou 1549. Quelle était son âge approximatif au moment de l’écriture ?</strong></p>
+    <input type="text" id="answer2" placeholder="Réponse en chiffres">
+    <button onclick="checkAnswer2()">Valider la réponse</button>
+    <p class="result" id="result2"></p>
+  </div>
 
-    <p>Un souffle glacial traverse la pièce. Une voix grave et désincarnée s’élève, semblant sortir à la fois des murs, des livres et de ta propre conscience :</p>
-    <blockquote>
-      <em>« Le savoir fut jadis une arme. Aujourd’hui encore, il peut t’arracher à la servitude. Mais chaque énigme mal résolue t’enfoncera dans les ténèbres de l’oubli... »</em>
-    </blockquote>
+  <div class="section" id="section3">
+    <h2>Énigme 3 : La racine du mal</h2>
+    <p>Dans un recoin de la pièce, des chaînes rouillées pendent au mur. Une inscription en latin y est gravée : <em>« Radix omnium malorum… »</em></p>
+    <p><strong>Selon La Boétie, quelle émotion humaine permet au tyran de régner ?</strong></p>
+    <input type="text" id="answer3">
+    <button onclick="checkAnswer3()">Valider la réponse</button>
+    <p class="result" id="result3"></p>
+  </div>
 
-    <p>Tu fermes les yeux un instant. Puis tu avances, décidé. Le jeu commence.</p>
+  <div class="section" id="section4">
+    <h2>Énigme 4 : L’art de divertir</h2>
+    <p>Un rideau rouge se lève : tu vois une foule qui applaudit un spectacle grotesque. Une voix ricane : <em>« On les gave de futilités et ils oublient leur chaîne… »</em></p>
+    <p><strong>Quelle expression résume la stratégie politique des tyrans pour calmer le peuple selon La Boétie ?</strong></p>
+    <input type="text" id="answer4">
+    <button onclick="checkAnswer4()">Valider la réponse</button>
+    <p class="result" id="result4"></p>
+  </div>
 
-    <div class="section active" id="section1">
-      <h2>Énigme 1 : Le nom effacé</h2>
-      <p>Près d’un pupitre vermoulu repose un manuscrit relié en cuir. En soufflant sur la couverture, tu révèles une annotation manuscrite, presque effacée par le temps : <em>« Celui qui parla de liberté… mais que nul ne nomma. »</em></p>
+  <div class="section" id="section5">
+    <h2>Énigme 5 : La force de l’habitude</h2>
+    <p>Une vieille horloge tourne à l’envers. Une voix chuchote : <em>« Il suffit de peu de temps pour qu’un homme apprenne à obéir... »</em></p>
+    <p><strong>Quel mot désigne ce phénomène d’acceptation passive et progressive de la soumission ?</strong></p>
+    <input type="text" id="answer5">
+    <button onclick="checkAnswer5()">Valider la réponse</button>
+    <p class="result" id="result5"></p>
+  </div>
 
-      <p>À côté, une bougie 🕯️ s’allume d’elle-même. Dans sa flamme vacillante, tu devines un mot gravé à la pointe du couteau : « Montaigne ». Un indice laissé là pour qui saurait lire entre les lignes.</p>
+  <div class="section" id="section6">
+  <h2>Énigme 6 : L'illusion du consentement</h2>
+  <p>Tu découvres un miroir ancien. Une phrase gravée dans le verre : <em>« Le peuple ne se rend pas libre... car il croit l’être. »</em></p>
+  <p><strong>Quel mot résume cette fausse perception de liberté selon La Boétie ?</strong></p>
+  <input type="text" id="answer6">
+  <button onclick="checkAnswer6()">Valider la réponse</button>
+  <p class="result" id="result6"></p>
+</div>
 
-      <p><strong>Quel est le nom complet de l’auteur du Discours de la servitude volontaire ?</strong></p>
-      <input type="text" id="answer1" placeholder="Tape ta réponse ici...">
-      <button onclick="checkAnswer1()">Valider la réponse</button>
-      <p class="result" id="result1"></p>
-    </div>
+<div class="section" id="section7">
+  <h2>Énigme 7 : Le tyran solitaire ?</h2>
+  <p>Des visages apparaissent dans les pierres. La voix murmure : <em>« Il n’est pas seul, il est soutenu. »</em></p>
+  <p><strong>Combien d’échelons principaux La Boétie identifie-t-il dans la pyramide de la servitude volontaire ? (réponse en chiffres)</strong></p>
+  <input type="text" id="answer7">
+  <button onclick="checkAnswer7()">Valider la réponse</button>
+  <p class="result" id="result7"></p>
+</div>
 
-    <div class="section" id="section2">
-      <h2>Énigme 2 : Le labyrinthe des dates</h2>
-      <p>Ta réponse résonne entre les piliers de pierre. Un déclic retentit. Le socle de la statue s’ouvre lentement, révélant trois rouleaux scellés de cire rouge. L’un d’eux s’élève dans les airs et s’ouvre sous tes yeux.</p>
+<div class="section" id="section8">
+  <h2>Énigme 8 : Le pouvoir sans armes</h2>
+  <p>Une salle pleine d’armures vides s’ouvre. Une banderole dit : <em>« Le tyran n’a de force que celle qu’on lui donne. »</em></p>
+  <p><strong>Quel mot désigne le mécanisme collectif qui rend le pouvoir possible selon La Boétie ?</strong></p>
+  <input type="text" id="answer8">
+  <button onclick="checkAnswer8()">Valider la réponse</button>
+  <p class="result" id="result8"></p>
+</div>
 
-      <p>Des lettres calligraphiées y forment cette phrase énigmatique : <em>« Il n’avait que 18 ans lorsqu’il rédigea le discours. Trouve l’année de sa naissance, puis soustrais-la de l’an de rédaction. »</em></p>
+<div class="section" id="section9">
+  <h2>Énigme 9 : Le poison sucré</h2>
+  <p>Un flacon est posé sur une table. Une étiquette : <em>« douce... mais fatale »</em></p>
+  <p><strong>Quel mot désigne, dans le discours, les petits privilèges qui maintiennent la servitude ?</strong></p>
+  <input type="text" id="answer9">
+  <button onclick="checkAnswer9()">Valider la réponse</button>
+  <p class="result" id="result9"></p>
+</div>
 
-      <p>Le silence est pesant. Même l’horloge semble s’être tue. Tu n’as droit qu’à une seule erreur.</p>
+<div class="section" id="section10">
+  <h2>Énigme 10 : L'enfant libre</h2>
+  <p>Un dessin gravé sur le mur : un nourrisson brise une chaîne. Une inscription : <em>« La nature... »</em></p>
+  <p><strong>Selon La Boétie, tout être humain naît avec un désir naturel de quoi ?</strong></p>
+  <input type="text" id="answer10">
+  <button onclick="checkAnswer10()">Valider la réponse</button>
+  <p class="result" id="result10"></p>
+</div>
 
-      <p><strong>Si le Discours date de 1549 et que son auteur avait 18 ans, quel est le résultat ?</strong></p>
-      <input type="text" id="answer2" placeholder="Ta réponse ici...">
-      <button onclick="checkAnswer2()">Valider la réponse</button>
-      <p class="result" id="result2"></p>
-    </div>
-  </main>
+  <div class="section" id="section11">
+  <h2>Énigme 11 : L'éloquence de la vérité</h2>
+  <p>Un parchemin pend d’un lutrin. On y lit : <em>« Les discours sincères éveillent l’esprit... plus sûrement que les chaînes. »</em></p>
+  <p><strong>Quel est l’arme principale utilisée par La Boétie dans son Discours ?</strong></p>
+  <input type="text" id="answer11">
+  <button onclick="checkAnswer11()">Valider la réponse</button>
+  <p class="result" id="result11"></p>
+</div>
 
-  <script>
-    function checkAnswer1() {
-      const answer = document.getElementById("answer1").value.trim().toLowerCase();
-      const result = document.getElementById("result1");
-      if (answer === "etienne de la boétie" || answer === "etienne de la boetie") {
-        result.textContent = "✅ Bien joué ! Une vibration secoue le sol, un cliquetis retentit... un nouveau compartiment s’ouvre dans la pierre.";
-        document.getElementById("section2").classList.add("active");
-      } else {
-        result.textContent = "❌ Ce n’est pas le bon nom... 💡 Indice : Il fut un intime de Montaigne, et son prénom commence par un É...";
+<div class="section" id="section12">
+  <h2>Énigme 12 : L'éveil de la jeunesse</h2>
+  <p>Une fresque montre un adolescent face à un roi couronné. Un mot résonne dans l'air : <em>« trop jeune pour craindre »</em>.</p>
+  <p><strong>Quel âge avait La Boétie lorsqu’il écrivit son discours ?</strong></p>
+  <input type="text" id="answer12">
+  <button onclick="checkAnswer12()">Valider la réponse</button>
+  <p class="result" id="result12"></p>
+</div>
+
+<div class="section" id="section13">
+  <h2>Énigme 13 : Le silence du peuple</h2>
+  <p>Tu entres dans une salle sans écho. La voix dit : <em>« Leur silence est plus bruyant que la révolte. »</em></p>
+  <p><strong>Selon La Boétie, par quoi le peuple pourrait-il faire tomber le tyran, sans violence ?</strong></p>
+  <input type="text" id="answer13">
+  <button onclick="checkAnswer13()">Valider la réponse</button>
+  <p class="result" id="result13"></p>
+</div>
+
+<div class="section" id="section14">
+  <h2>Énigme 14 : L'héritage empoisonné</h2>
+  <p>Une tapisserie représente un père enchaînant son fils. La légende murmure : <em>« On ne naît pas esclave, on le devient. »</em></p>
+  <p><strong>Comment s'appelle le mécanisme par lequel la servitude se transmet d'une génération à l'autre ?</strong></p>
+  <input type="text" id="answer14">
+  <button onclick="checkAnswer14()">Valider la réponse</button>
+  <p class="result" id="result14"></p>
+</div>
+
+<div class="section" id="section15">
+  <h2>Énigme 15 : L’ultime lumière</h2>
+  <p>Une clé brille dans les airs. La pièce s’illumine. Une voix murmure pour la dernière fois : <em>« Comprends-tu enfin ce qui libère ? »</em></p>
+  <p><strong>Un seul mot, selon La Boétie, peut dissiper toutes les tyrannies. Lequel ?</strong></p>
+  <input type="text" id="answer15">
+  <button onclick="checkAnswer15()">Valider la réponse</button>
+  <p class="result" id="result15"></p>
+  <!-- Les énigmes 6 à 15 seront insérées dans les prochaines sections -->
+</main>
+<script>
+  function validateAndShowNext(answerId, resultId, expectedAnswers, nextSectionId, hint) {
+    const answer = document.getElementById(answerId).value.trim().toLowerCase();
+    const result = document.getElementById(resultId);
+    const valid = expectedAnswers.includes(answer);
+    if (valid) {
+      result.textContent = "✅ Bonne réponse. La voie se dégage devant toi...";
+      if (nextSectionId) {
+        document.getElementById(nextSectionId).classList.add("active");
       }
+    } else {
+      result.textContent = `❌ Faux... 💡 Indice : ${hint}`;
     }
-
-    function checkAnswer2() {
-      const answer = document.getElementById("answer2").value.trim();
-      const result = document.getElementById("result2");
-      if (answer === "1531") {
-        result.textContent = "✅ Juste ! Une lumière bleutée trace un chemin dans les rayonnages... Tu avances dans le labyrinthe de la pensée.";
-        // Prochaine section à activer ici
-      } else {
-        result.textContent = "❌ Mauvaise réponse... 🤔 Indice : Soustrais bien 18 à 1549... Quelle année obtiens-tu ?";
-      }
-    }
-  </script>
+  }
+  function checkAnswer1() {
+    validateAndShowNext("answer1", "result1", ["etienne de la boétie", "etienne de la boetie"], "section2", "C’est un ami de Montaigne.");
+  }
+  function checkAnswer2() {
+    validateAndShowNext("answer2", "result2", ["18"], "section3", "Fais bien la différence entre 1549 et l’année de naissance...");
+  }
+  function checkAnswer3() {
+    validateAndShowNext("answer3", "result3", ["la peur"], "section4", "C’est une émotion qu’on utilise pour soumettre.");
+  }
+  function checkAnswer4() {
+    validateAndShowNext("answer4", "result4", ["du pain et des jeux", "le pain et les jeux"], "section5", "C’est une expression antique que La Boétie reprend.");
+  }
+  function checkAnswer5() {
+    validateAndShowNext("answer5", "result5", ["l'habitude", "l’habitude", "l'habitude de la soumission", "l’habitude de la soumission"], null, "Elle rend docile, sans même y penser.");
+  }
+  function checkAnswer6() {
+    validateAndShowNext("answer6", "result6", ["illusion", "illusion de liberté"], "section7", "Ce n’est pas la liberté, c’est une apparence de liberté.");
+  }
+  function checkAnswer7() {
+    validateAndShowNext("answer7", "result7", ["5"], "section8", "Il s’agit d’une hiérarchie pyramidale, observe bien.");
+  }
+  function checkAnswer8() {
+    validateAndShowNext("answer8", "result8", ["consentement", "soumission collective"], "section9", "Le tyran n’existe que par ce que d’autres acceptent de lui donner.");
+  }
+  function checkAnswer9() {
+    validateAndShowNext("answer9", "result9", ["faveurs", "privilèges"], "section10", "On les donne pour acheter la loyauté.");
+  }
+  function checkAnswer10() {
+    validateAndShowNext("answer10", "result10", ["la liberté", "liberté"], "section11", "C’est un élan inné, selon l’auteur.");
+  }
+  function checkAnswer11() {
+    validateAndShowNext("answer11", "result11", ["la parole", "le langage", "la rhétorique"], "section12", "C’est par elle qu’il s’adresse à tous, sans armes.");
+  }
+  function checkAnswer12() {
+    validateAndShowNext("answer12", "result12", ["18"], "section13", "Il n’était pas encore adulte selon la loi actuelle.");
+  }
+  function checkAnswer13() {
+    validateAndShowNext("answer13", "result13", ["le refus d’obéir", "le refus d'obeir", "refus d’obéir", "refus d'obeir"], "section14", "Ce n’est pas une action violente, mais une non-action.");
+  }
+  function checkAnswer14() {
+    validateAndShowNext("answer14", "result14", ["l'habitude", "l’habitude"], "section15", "Elle s’installe dès l’enfance, sans qu’on s’en rende compte.");
+  }
+  function checkAnswer15() {
+    validateAndShowNext("answer15", "result15", ["non", "le non"], null, "Il suffit parfois d’un seul mot pour que la machine s’arrête.");
+  }
+</script>
 </body>
 </html>
