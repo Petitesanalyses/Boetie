@@ -11,9 +11,17 @@
       color: #333;
       padding: 20px;
       line-height: 1.6;
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      max-width: 700px;
+      width: 100%;
     }
     .section {
-      margin-bottom: 30px;
+      margin: 60px 0;
+      padding: 30px;
+      border-top: 2px solid #ccc;
       display: none;
     }
     .section.active {
@@ -35,47 +43,49 @@
     input[type="text"] {
       padding: 5px;
       margin-top: 5px;
+      width: 100%;
+      max-width: 300px;
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>🔓 Escape game littéraire : libère La Boétie 📚🕯️</h1>
+    <h1>🔓 Escape game littéraire : Libère La Boétie</h1>
 
-    <p>🌫️ Tu ouvres les yeux. L’air est froid, chargé de poussière. Tu es allongé·e sur le sol d’une immense pièce circulaire. Les murs sont entièrement couverts de bibliothèques anciennes. Des centaines de grimoires t'observent en silence. 📖👁️</p>
+    <p>Tu te redresses lentement. Une brume légère flotte dans l’air, effleurant les livres poussiéreux posés sur les étagères. Quelque chose ici semble vivant. L’ambiance n’a rien d’ordinaire… Comme si le lieu lui-même t’attendait.</p>
 
-    <p>🕰️ Une horloge monumentale fait entendre son tic-tac oppressant. Soudain, une lueur se projette depuis le plafond voûté, illuminant une statue de marbre au centre de la pièce. Elle représente un jeune homme tenant un rouleau. À ses pieds, une phrase gravée : <em>« Ceux qui acceptent leur chaîne oublient leur nom. »</em> 🗿</p>
+    <p>Soudain, un rayon de lumière traverse le plafond en ogive et vient frapper une statue de marbre blanc. Le visage du jeune homme semble t’observer, presque compatissant. Une inscription est gravée sur le socle : <em>« Ceux qui acceptent leur chaîne oublient leur nom. »</em></p>
 
-    <p>Un courant d’air te fait frissonner. Une voix lointaine, éthérée, murmure dans l’ombre :</p>
+    <p>Tu entends alors, entre deux battements d’horloge, une voix profonde et lointaine. Elle semble venir de partout à la fois :</p>
     <blockquote>
-      <em>« Le savoir est la seule clé. Pour libérer la pensée, tu devras affronter les énigmes de la servitude. Chaque réponse te rapprochera de la lumière… »</em>
+      <em>« Le savoir est la clé. Pour libérer ce lieu et ta pensée, tu devras résoudre les énigmes de la servitude. Une seule erreur, et tu pourrais t’égarer dans ces murs… »</em>
     </blockquote>
 
-    <p>🔐 Tu n’as pas le choix. Tu te lèves, l’esprit embrumé mais décidé. Une porte invisible claque derrière toi. Le silence est désormais total. Tu es seul·e. Mais pas sans ressources. Commençons. ✨</p>
+    <p>Un frisson te parcourt. Tu inspires profondément. Le jeu commence.</p>
 
     <div class="section active" id="section1">
-      <h2>🔍 Énigme 1 : le nom effacé</h2>
-      <p>📜 Tu t’approches d’un pupitre recouvert de poussière. En soufflant doucement, tu découvres un vieux manuscrit, ouvert à une page arrachée. Une seule annotation est restée :</p>
-      <blockquote>
-        « Celui qui parla de liberté… mais que personne ne nomma. »
-      </blockquote>
-      <p>🔎 Une chandelle 🕯️ s’allume d’elle-même à ta droite. Elle éclaire à peine quelques mots griffonnés : « ami de Montaigne ». Tu comprends qu’il faut retrouver un nom. Le bon nom.</p>
-      <p>🧠 Quel est le <strong>nom complet</strong> de l’auteur du <em>Discours de la servitude volontaire</em> ?</p>
+      <h2>Énigme 1 : Le nom effacé</h2>
+      <p>Tu t’approches d’un pupitre. En soufflant sur le vieux cuir du manuscrit, tu aperçois une annotation griffonnée à la main. Elle dit : <em>« Celui qui parla de liberté… mais que personne ne nomma. »</em></p>
+
+      <p>À côté, une bougie 🕯️ s’allume d’elle-même, révélant un mot à demi effacé : « Montaigne ». Tu comprends que tu dois redonner un nom à celui qu’on a voulu oublier.</p>
+
+      <p><strong>Quel est le nom complet de l’auteur du Discours de la servitude volontaire ?</strong></p>
       <input type="text" id="answer1" placeholder="Tape ta réponse ici...">
-      <button onclick="checkAnswer1()">valider la réponse ✅</button>
+      <button onclick="checkAnswer1()">Valider la réponse</button>
       <p class="result" id="result1"></p>
     </div>
 
     <div class="section" id="section2">
-      <h2>🗝️ Énigme 2 : le labyrinthe des dates</h2>
-      <p>⚙️ En entendant ta réponse, la statue tremble légèrement. Un compartiment s’ouvre lentement dans son socle. Trois rouleaux anciens s’en échappent et planent devant toi. L’un d’eux brille d’une lumière bleutée. ✨</p>
+      <h2>Énigme 2 : Le labyrinthe des dates</h2>
+      <p>En prononçant la bonne réponse, tu entends un déclic. Un tiroir s’ouvre dans le socle de la statue. Trois parchemins enroulés s’en échappent lentement. L’un d’eux flotte jusqu’à toi et se déroule sous tes yeux.</p>
 
-      <p>Tu tends la main. Le rouleau s’ouvre seul. Il indique :<br>
-      <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, et soustrais-la de l’année présumée d’écriture du texte. »</em></p>
+      <p>Tu y lis une énigme : <em>« Il n’avait que 18 ans quand il écrivit ce texte. Trouve l’année de sa naissance, puis soustrais-la de l’année présumée de rédaction. »</em></p>
 
-      <p>📘 Si l’année d’écriture est <strong>1549</strong> et qu’il avait 18 ans, quel est le résultat ?</p>
+      <p>Tu sens que la pièce retient son souffle. Si tu échoues, les murs pourraient bien se refermer...</p>
+
+      <p><strong>Si le Discours date de 1549 et qu’il avait 18 ans, quel résultat obtiens-tu ?</strong></p>
       <input type="text" id="answer2" placeholder="Ta réponse ici...">
-      <button onclick="checkAnswer2()">valider la réponse ✅</button>
+      <button onclick="checkAnswer2()">Valider la réponse</button>
       <p class="result" id="result2"></p>
     </div>
   </main>
@@ -85,7 +95,7 @@
       const answer = document.getElementById("answer1").value.trim().toLowerCase();
       const result = document.getElementById("result1");
       if (answer === "etienne de la boétie" || answer === "etienne de la boetie") {
-        result.textContent = "✅ Bien joué ! Une vibration secoue le sol, un cliquetis retentit... un nouveau compartiment s’ouvre ! 🧩";
+        result.textContent = "✅ Bien joué ! Une vibration secoue le sol, un cliquetis retentit... un nouveau compartiment s’ouvre !";
         document.getElementById("section2").classList.add("active");
       } else {
         result.textContent = "❌ Ce n’est pas le bon nom... 💡 Indice : il fut un grand ami de Montaigne, et son prénom commence par un É...";
@@ -96,7 +106,7 @@
       const answer = document.getElementById("answer2").value.trim();
       const result = document.getElementById("result2");
       if (answer === "1531") {
-        result.textContent = "✅ Juste ! Une lumière bleue trace un chemin dans les rayonnages... tu avances dans le labyrinthe de la pensée. 🔦📚";
+        result.textContent = "✅ Juste ! Une lumière bleue trace un chemin dans les rayonnages... tu avances dans le labyrinthe de la pensée.";
         // Prochaine section à activer ici
       } else {
         result.textContent = "❌ Mauvaise réponse... 🤔 Indice : Soustrais bien 18 à 1549... Quelle année trouve-t-on ?";
