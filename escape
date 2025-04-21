@@ -1,0 +1,115 @@
+<div id="escape-game">
+  <h2>🔐 Escape Game Littéraire : Le Discours Interdit</h2>
+  <p>
+    Année 1574. 📜 Tu es un jeune humaniste révolté. La Boétie est mort depuis 14 ans, mais un manuscrit oublié du <em>Discours de la servitude volontaire</em> vient d'être retrouvé. Pour le rendre public, tu dois échapper à la censure du pouvoir royal, traverser 15 épreuves, et décrypter le sens profond du texte. Un seul mot d’ordre : résister. Prêt ? Commence l’aventure.
+  </p>
+
+  <!-- ÉNIGME 1 -->
+  <div class="enigme" id="enigme1">
+    <h3>🧩 Énigme 1 : La page disparue</h3>
+    <p>Un indice est caché dans une phrase du Discours : « Il est incroyable de voir comme le peuple, dès qu’il est assujetti, tombe soudain dans un si profond oubli de sa liberté... »<br>
+    Mais quel mot-clé La Boétie répète-t-il plusieurs fois dans le premier tiers du texte, pour décrire l'attitude des sujets ?</p>
+    <input type="text" id="reponse1" placeholder="Écris ta réponse ici">
+    <button onclick="verifierEnigme1()">Valider ✅</button>
+    <p id="feedback1"></p>
+  </div>
+
+  <!-- ÉNIGME 2 (cachée par défaut) -->
+  <div class="enigme" id="enigme2" style="display:none">
+    <h3>🧠 Énigme 2 : Le choix de l'ombre</h3>
+    <p>Un noble t’accueille dans son manoir et t'offre trois livres en apparence identiques. Un seul contient un extrait caché du Discours. Sur leur tranche, tu lis :<br>
+      📕 <em>Du contrat social</em><br>
+      📗 <em>Le Prince</em><br>
+      📘 <em>Les Essais</em><br>
+      Lequel choisir pour trouver la trace de La Boétie ?</p>
+    <select id="reponse2">
+      <option value="">Choisis un livre</option>
+      <option value="contrat">📕 Du contrat social</option>
+      <option value="prince">📗 Le Prince</option>
+      <option value="essais">📘 Les Essais</option>
+    </select>
+    <button onclick="verifierEnigme2()">Valider ✅</button>
+    <p id="feedback2"></p>
+  </div>
+
+  <!-- ÉNIGME 3 (exemple d’interactivité poussée) -->
+  <div class="enigme" id="enigme3" style="display:none">
+    <h3>🔮 Énigme 3 : Le code de la servitude</h3>
+    <p>Un coffre ancien s’ouvre à demi. Il contient un papier avec le message suivant :</p>
+    <blockquote>
+      "Transforme chaque lettre du mot <strong>OBEIR</strong> selon cette règle :<br>
+      A → Z, B → Y, C → X, ... (substitution miroir de l'alphabet)"
+    </blockquote>
+    <p>Entre le mot décodé :</p>
+    <input type="text" id="reponse3" placeholder="Ta réponse">
+    <button onclick="verifierEnigme3()">Valider ✅</button>
+    <p id="feedback3"></p>
+  </div>
+</div>
+
+<script type="text/javascript">
+function verifierEnigme1() {
+  const reponse = document.getElementById("reponse1").value.trim().toLowerCase();
+  const feedback = document.getElementById("feedback1");
+  if (reponse === "habitude" || reponse === "l’habitude" || reponse === "l'habitude") {
+    feedback.innerHTML = "🟩 Bonne réponse ! Tu peux passer à l’étape suivante.";
+    document.getElementById("enigme2").style.display = "block";
+  } else {
+    feedback.innerHTML = "🔵 Non, ce mot revient très souvent au début. Cherche encore.";
+  }
+}
+
+function verifierEnigme2() {
+  const reponse = document.getElementById("reponse2").value;
+  const feedback = document.getElementById("feedback2");
+  if (reponse === "essais") {
+    feedback.innerHTML = "🟩 Exact ! Montaigne a préservé une partie de l’âme de son ami dans ses écrits.";
+    document.getElementById("enigme3").style.display = "block";
+  } else {
+    feedback.innerHTML = "🔵 Faux. Ce n’est pas le bon auteur. Réfléchis à l’ami fidèle de La Boétie.";
+  }
+}
+
+function verifierEnigme3() {
+  const reponse = document.getElementById("reponse3").value.trim().toUpperCase();
+  const feedback = document.getElementById("feedback3");
+  if (reponse === "LYVRI") {
+    feedback.innerHTML = "🟩 Tu as décodé le langage du pouvoir ! Une serrure invisible vient de céder...";
+  } else {
+    feedback.innerHTML = "🔵 Essaie encore. Ce n’est pas encore le bon mot miroir.";
+  }
+}
+</script>
+
+<style>
+.enigme {
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 2px solid #444;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+.enigme h3 {
+  margin-top: 0;
+}
+input, select {
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+button {
+  padding: 0.5em 1em;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+}
+button:hover {
+  background-color: #222;
+}
+</style>
