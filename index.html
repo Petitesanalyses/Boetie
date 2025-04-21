@@ -225,7 +225,7 @@
     validateAndShowNext("answer5", "result5", ["l'habitude", "l’habitude", "l'habitude de la soumission", "l’habitude de la soumission"], "section6", "Elle rend docile, sans même y penser.");
   }
   function checkAnswer6() {
-    validateAndShowNext("answer6", "result6", ["illusion", "illusion de liberté"], "section7", "Ce n’est pas la liberté, c’est une apparence de liberté.");
+    validateAndShowNext("answer6", "result6", ["illusion", "illusion de liberté", "l'illusion"], "section7", "Ce n’est pas la liberté, c’est une apparence de liberté.");
   }
   function checkAnswer7() {
     validateAndShowNext("answer7", "result7", ["5"], "section8", "Il s’agit d’une hiérarchie pyramidale, observe bien.");
@@ -252,8 +252,15 @@
     validateAndShowNext("answer14", "result14", ["l'habitude", "l’habitude"], "section15", "Elle s’installe dès l’enfance, sans qu’on s’en rende compte.");
   }
   function checkAnswer15() {
-    validateAndShowNext("answer15", "result15", ["non", "le non"], null, "Il suffit parfois d’un seul mot pour que la machine s’arrête.");
+  const answer = document.getElementById("answer15").value.trim().toLowerCase();
+  const result = document.getElementById("result15");
+  if (["non", "le non"].includes(answer)) {
+    result.textContent = "✅ Le mot a été prononcé. Le silence devient lumière...";
+    document.getElementById("finale").style.display = "block";
+  } else {
+    result.textContent = "❌ Ce n’est pas encore le mot juste... 💡 Indice : c’est un simple refus, mais si puissant qu’il suffit à tout ébranler.";
   }
+}
 </script>
 </body>
 </html>
